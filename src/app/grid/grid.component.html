@@ -1,0 +1,42 @@
+<!-- Form to input new weather data -->
+<div class="add-weather-form">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="City"
+      [(ngModel)]="newWeatherData.city"
+      name="city"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      type="number"
+      placeholder="Temperature"
+      [(ngModel)]="newWeatherData.temperature"
+      name="temperature"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Description"
+      [(ngModel)]="newWeatherData.description"
+      name="description"
+    />
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addWeatherData()">
+    Add Weather Data
+  </button>
+</div>
+
+<!-- Grid to display the weather data -->
+<mat-grid-list cols="4" rowHeight="150px" gutterSize="16px">
+  <mat-grid-tile *ngFor="let data of weatherData">
+    <div class="grid-tile-content">
+      <h3>{{ data.city }}</h3>
+      <p>Temperature: {{ data.temperature }}°C</p>
+      <p>{{ data.description }}</p>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

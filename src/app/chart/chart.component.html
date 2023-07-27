@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Bar Chart - Fruit Sales</mat-card-title>
+  <mat-card-content>
+    <div *ngFor="let item of barChartData">
+      <div class="bar-item">
+        <div class="bar-label">{{ item.fruit }}</div>
+        <mat-progress-bar
+          mode="determinate"
+          [value]="item.quantity"
+        ></mat-progress-bar>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

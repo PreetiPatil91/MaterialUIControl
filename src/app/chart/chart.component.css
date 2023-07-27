@@ -1,0 +1,11 @@
+/* bar-chart.component.css */
+.bar-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bar-label {
+  margin-right: 12px;
+  width: 100px;
+}
